@@ -30,40 +30,80 @@ This is a full-stack application that allows users to **upload images** and **se
 
 ### 🔧 Backend Setup
 
-**Create a virtual environment** (optional but recommended):
+Create and activate a virtual environment:
 
-    ```bash
-    conda create -n semantic-search python=3.11
-    conda activate semantic-search
-    
-    Install dependencies:
-    pip install -r requirements.txt
-    
-    Run the backend:
-    uvicorn backend:app --reload
+```bash
+conda create -n semantic-search python=3.11
+conda activate semantic-search
+```
 
-    Make sure your backend runs on http://localhost:8000.
+Install dependencies:
 
-**Frontend Setup**
-  Create the React app (if not cloned already):
-  
-  
-  npx create-react-app semantic-search-frontend
-  Replace src/ with your custom components (App.jsx, index.css, etc.)
-  
-  Run the frontend:
-  npm install
-  npm start
-  
-  React app will run on http://localhost:3000.
+```bash
+pip install -r requirements.txt
+```
 
-  semantic-search/
-├── backend.py              # FastAPI backend with CLIP & FAISS
-├── requirements.txt
-├── uploads/                # Image uploads (if using local storage)
-└── semantic-search-frontend/
-    ├── src/
-    │   ├── App.jsx
-    │   ├── index.css
-    │   └── ...
-    └── public/
+Run the backend:
+
+```bash
+uvicorn backend:app --reload
+```
+
+> Your backend should now be running at: [http://localhost:8000](http://localhost:8000)
+
+---
+
+### 🖥️ Frontend Setup
+
+Create the React app:
+
+```bash
+npx create-react-app semantic-search-frontend
+```
+
+Replace the contents of `src/` with your custom components (`App.jsx`, `index.css`, etc.).
+
+Install dependencies and run:
+
+```bash
+npm install
+npm start
+```
+
+> React app will now run at: [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 📂 Project Structure
+
+```
+semantic-search/
+├── backend.py                  # FastAPI backend with CLIP & FAISS
+├── requirements.txt            # Python dependencies
+├── uploads/                    # Image uploads (if using local storage)
+└── semantic-search-frontend/   # React frontend
+    ├── public/
+    └── src/
+        ├── App.jsx
+        ├── index.css
+        └── ...
+```
+
+---
+
+## 📸 Example Usage
+
+- Upload an image of a **cat**
+- Type `cat` in the search bar
+- Image of the cat will appear — matched using CLIP!
+
+---
+
+## 🔐 Optional: Supabase Setup
+
+- Enable **public access** to the Storage bucket
+- OR configure **Row Level Security (RLS)** to allow `anon` users `INSERT` and `SELECT`
+- Update your backend to use Supabase Storage API if needed
+
+---
+
