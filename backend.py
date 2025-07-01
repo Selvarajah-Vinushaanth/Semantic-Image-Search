@@ -19,8 +19,8 @@ app.add_middleware(
 )
 
 # Supabase setup
-SUPABASE_URL = "https://fxrnoxjltqjxhyagwckq.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ4cm5veGpsdHFqeGh5YWd3Y2txIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEzNTI2MDgsImV4cCI6MjA2NjkyODYwOH0.Oid2LwiQs497QCBrecoMVVxya_3kGoynhQ9YX5dA29M"
+SUPABASE_URL = "https://fxr########################################"
+SUPABASE_KEY = "eyJhbGciOiJ##############################################################I6MjA2NjkyODYwOH0.Oid2LwiQs497QCBrecoMVVxya_3kGoynhQ9YX5dA29M"
 SUPABASE_BUCKET = "images"
 SUPABASE_TABLE = "images"
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
